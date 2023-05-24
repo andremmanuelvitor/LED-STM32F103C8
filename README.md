@@ -12,4 +12,4 @@ A fim de ilustrar melhor, a imagem a seguir descreve os ODRs no microprocessador
 
 Por particularidades do placa em questão, está sendo usados 16bits para a utilização dos leds. Assim, os sinalizando de ODR0 a ODR15.
 
-O segundo código é muito similar ao primeiro. No entanto, a posição de memória dos LEDS (consulta feita via datasheet) foram informadas no ínicio para facilitar o desenvolvimento. No Loop há uma diferença também, para garantir a condição definida no ínicio. Dessa maneira o STRH garante sempre a leitura individual das regiões de memória dos LEDS, com um salto de 2 posições, já que são WORDS armazenadas em LIFO (Last in, first out)
+O segundo código é muito similar ao primeiro. No entanto, a posição de memória dos LEDS (consulta feita via datasheet) foram informadas no ínicio para facilitar o desenvolvimento. No Loop há uma diferença também, para garantir a condição definida no ínicio. Dessa maneira o STRH garante sempre a leitura individual das regiões de memória dos LEDS, com um salto de 2 posições, já que são WORDS armazenadas com os bits menos significativos primeiro.
